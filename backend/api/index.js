@@ -3,7 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 require("dotenv").config();
 
-const routes = require("./routes/TaskRoute")
+const routes = require("../routes/TaskRoute")
 
 const cors = require("cors");
 
@@ -18,6 +18,6 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 
-app.use("https://crud-full-stack-api.vercel.app/api", routes);
+app.use("/api", routes);
 
 app.listen(PORT, () => console.log(`Executando na porta ${PORT}`));
