@@ -19,7 +19,7 @@ function App() {
   }, [updateUi])
   
   const addTask = () => {
-    axios.post(`${baseURL}/save`, {task: input}).then((res) => {
+    axios.post(`${baseURL}/save`, { task: input }).then((res) => {
       console.log(res.data)
       setInput("")
       setUpdateUi((prevState) => !prevState)
@@ -33,7 +33,7 @@ function App() {
   }
   
   const updateTask = () => {
-    axios.put(`${baseURL}/update/${updateId}`, {task: input}).then((res) => {
+    axios.put(`${baseURL}/update/${updateId}`, { task: input }).then((res) => {
       console.log(res.data)
       setUpdateUi((prevState) => !prevState)
       setUpdateId(null)
