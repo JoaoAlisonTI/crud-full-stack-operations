@@ -1,1 +1,1 @@
-export const baseURL = "http://localhost:5000/api"
+export const baseURL = "https://crud-full-stack-api.vercel.app/api"
