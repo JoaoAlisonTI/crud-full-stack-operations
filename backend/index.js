@@ -18,6 +18,6 @@ mongoose
   .then(() => console.log("MongoDB Connected..."))
   .catch((err) => console.log(err));
 
-app.use("/api", routes);
+app.use("https://crud-full-stack-frontend.vercel.app/api", routes);
 
 app.listen(PORT, () => console.log(`Executando na porta ${PORT}`));
